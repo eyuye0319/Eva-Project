@@ -1,60 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grade 6 Ministry Exam</title>
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
-  <!-- Site Header -->
-  <header class="site-header">
-    <div class="header-container">
-      
-      <!-- Brand / Logo Section -->
-            <div class="img-container">
-                <img class="brand-container" src="../asset/image.png" alt="">
-
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grade 6 Ministry Exam</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Site Header -->
+    <header class="site-header">
+      <div class="header-container">
+        <!-- Brand / Logo Section -->
+        <div class="brand-logo">
+          <img class="brand-logo-container" src="../asset/image.png" alt="" />
+        </div>
         <div class="brand-text">
           <h1 class="brand-title">Amhara Education Bureau</h1>
           <span class="brand-subtitle">QMT Exam Services</span>
         </div>
-      
 
-      <!--Navigation -->
-      <nav class="nav-menu">
-        <ul class="nav-list">
-          <li><a href="#" class="nav-link active">Home</a></li>
-          <li><a href="#" class="nav-link">Check Result</a></li>
-          <li><a href="#" class="nav-link">Complaint</a></li>
-          <li><a href="#" class="nav-link">Top Scorers</a></li>
-        </ul>
-      </nav>
+        <!--Navigation -->
+        <nav class="nav-menu">
+          <ul class="nav-list">
+            <li><a href="#" class="nav-link active">Home</a></li>
+            <li><a href="#" class="nav-link">Check Result</a></li>
+            <li><a href="#" class="nav-link">Complaint</a></li>
+            <li><a href="#" class="nav-link">Top Scorers</a></li>
+          </ul>
+        </nav>
 
-      <!-- Header Actions-->
-      <div class="header-actions">
-        
-        <!-- Language Dropdown -->
-        <div class="lang-dropdown">
-          <button type="button" class="lang-btn">
-            <span>English</span>
-            <svg class="chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </button>
+        <!-- Header Actions-->
+        <div class="header-actions">
+          <!-- Language Dropdown -->
+          <div class="lang-dropdown">
+            <button type="button" class="lang-btn">
+              <span>English</span>
+              <svg
+                class="chevron-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Login Action -->
+          <a href="#" class="login-btn">Login</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <!-- Left Content Column -->
+      <div class="hero-content">
+        <!-- Badge-->
+        <div class="badge">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"
+            />
+          </svg>
+          <span>Instant Access, Secure and Easy to Use</span>
         </div>
 
-        <!-- Login Action -->
-        <a href="#" class="login-btn">Login</a>
+        <!-- Main -->
+        <h1>
+          <span class="grade-6">Grade 6</span>
+          <span class="ministry">Ministry</span>
+          Result Portal
+        </h1>
+
+        <!-- Description-->
+        <p>
+          Access your result quickly and securely. Check your examination
+          scores, download certificates, and track your complaints all in one
+          place.
+        </p>
+
+        <!--Ckeck Button -->
+        <a href="#check-result" class="check-btn"> Check My Result &rarr; </a>
       </div>
 
-    </div>
-  </header>
-
-</body>
+      <!-- Right Image / Illustration Column -->
+      <div class="hero-image">
+        <img
+          src="../asset/image copy.png"
+          alt="hero-image"
+        />
+      </div>
+    </section>
+  </body>
 </html>
