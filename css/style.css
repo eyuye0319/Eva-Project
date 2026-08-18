@@ -1,0 +1,369 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+:root {
+  --ink: #172b4d;
+  --muted: #66758c;
+  --blue: #1769aa;
+  --blue-dark: #0d4778;
+  --teal: #16a6a0;
+  --yellow: #f6c85f;
+  --surface: #ffffff;
+  --background: #f4f8fb;
+  --line: #dce7ef;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  color: var(--ink);
+  background: var(--background);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.5;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header {
+  position: relative;
+  z-index: 1;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  width: min(1180px, calc(100% - 48px));
+  min-height: 88px;
+  margin: 0 auto;
+}
+
+.logo-section,
+.header-actions,
+.nav-list,
+.lang-btn,
+.badge {
+  display: flex;
+  align-items: center;
+}
+
+.logo-section {
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  overflow: hidden;
+  place-items: center;
+  border: 1px solid #c9e1e8;
+  border-radius: 12px;
+  background: #e8f6f5;
+}
+
+.brand-logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.brand-title,
+.brand-subtitle,
+.hero h1 {
+  margin: 0;
+}
+
+.brand-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.brand-subtitle {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.nav-list {
+  gap: clamp(16px, 2.5vw, 34px);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-link {
+  position: relative;
+  display: block;
+  padding: 33px 0 30px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color 180ms ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--blue);
+}
+
+.nav-link.active::after {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 3px;
+  content: "";
+  background: var(--teal);
+}
+
+.header-actions {
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.lang-btn,
+.header-actions > button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.lang-btn {
+  gap: 6px;
+  padding: 8px 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.chevron-icon {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2;
+}
+
+.login-btn,
+.check-btn {
+  display: inline-block;
+  border-radius: 7px;
+  font-weight: 700;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+}
+
+.login-btn {
+  padding: 11px 20px;
+  color: var(--surface);
+  background: var(--blue);
+  font-size: 0.85rem;
+}
+
+.login-btn:hover,
+.check-btn:hover {
+  background: var(--blue-dark);
+  box-shadow: 0 8px 18px rgba(23, 105, 170, 0.2);
+  transform: translateY(-2px);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr);
+  align-items: center;
+  gap: clamp(40px, 7vw, 104px);
+  width: min(1180px, calc(100% - 48px));
+  min-height: calc(100vh - 88px);
+  margin: 0 auto;
+  padding: 72px 0 96px;
+}
+
+.hero-content {
+  max-width: 570px;
+}
+
+.badge {
+  display: inline-flex;
+  gap: 8px;
+  padding: 8px 13px;
+  border: 1px solid #c9e7e3;
+  border-radius: 999px;
+  color: #087d79;
+  background: #eaf8f6;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.badge svg {
+  color: var(--teal);
+}
+
+.hero h1 {
+  max-width: 600px;
+  margin-top: 24px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  letter-spacing: -0.04em;
+  line-height: 1.04;
+}
+
+.grade-6,
+.ministry {
+  display: block;
+}
+
+.grade-6 {
+  color: var(--blue);
+}
+
+.ministry {
+  color: var(--teal);
+}
+
+.hero p {
+  max-width: 500px;
+  margin: 24px 0 32px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.hero-content > button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.check-btn {
+  padding: 15px 23px;
+  color: var(--surface);
+  background: var(--blue);
+  font-size: 0.95rem;
+}
+
+.hero-image {
+  position: relative;
+  display: grid;
+  min-height: 430px;
+  place-items: center;
+  border-radius: 26px;
+  background: linear-gradient(135deg, #d9f3f0, #e9f1fa 62%, #fff4d8);
+  overflow: hidden;
+}
+
+.hero-image::before,
+.hero-image::after {
+  position: absolute;
+  border-radius: 50%;
+  content: "";
+}
+
+.hero-image::before {
+  width: 220px;
+  height: 220px;
+  top: -80px;
+  right: -40px;
+  background: rgba(246, 200, 95, 0.55);
+}
+
+.hero-image::after {
+  width: 150px;
+  height: 150px;
+  bottom: -55px;
+  left: -40px;
+  background: rgba(22, 166, 160, 0.3);
+}
+
+.hero-image img {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 540px);
+  max-height: 500px;
+  object-fit: contain;
+}
+
+@media (max-width: 900px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-top: 64px;
+  }
+
+  .hero-content {
+    max-width: 680px;
+  }
+
+  .hero-image {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 520px) {
+  .header-container,
+  .hero {
+    width: min(100% - 32px, 1180px);
+  }
+
+  .header-container {
+    min-height: 76px;
+  }
+
+  .brand-title {
+    max-width: 150px;
+    font-size: 0.86rem;
+  }
+
+  .brand-logo {
+    width: 42px;
+    height: 42px;
+  }
+
+  .lang-dropdown {
+    display: none;
+  }
+
+  .hero {
+    gap: 44px;
+    padding: 48px 0 64px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.6rem, 13vw, 4rem);
+  }
+
+  .hero p {
+    font-size: 0.98rem;
+  }
+
+  .hero-image {
+    min-height: 260px;
+    border-radius: 18px;
+  }
+}
